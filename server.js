@@ -19,7 +19,7 @@ app.use(require('./routes/htmlRoutes.js'));
 // Mongoose Connection to DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
-  useFindAndModify: false
+  useUnifiedTopology: true
 });
 
 // Server 
